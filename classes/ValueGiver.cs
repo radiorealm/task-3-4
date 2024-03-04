@@ -18,7 +18,7 @@ namespace task_3_4
             {
                 case "int":
                     T a = (T)random.Next(100);
-                    return a
+                    return a;
                 case "string":
                     return alphabet[random.Next(alphabet.Length)];
                 case "bool":

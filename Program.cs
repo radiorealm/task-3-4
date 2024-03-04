@@ -16,7 +16,7 @@ namespace task_3_4
 
             Console.WriteLine("Введите n для одномерного массива:");
             int n1 = int.Parse(Console.ReadLine());
-            OneDim onedim = new(n1, entry);
+            OneDim<string> onedim = new(n1, entry);
 
             Console.WriteLine();
 
@@ -24,7 +24,7 @@ namespace task_3_4
             int n2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите m для двумерного массива:");
             int m = int.Parse(Console.ReadLine());
-            TwoDim twodim = new(n2, m, entry);
+            TwoDim<bool> twodim = new(n2, m, entry);
 
             Console.WriteLine();
 
@@ -44,9 +44,6 @@ namespace task_3_4
                 printer_array[i].Print();
                 Console.WriteLine();
             }
-
-
-
         }
     }
 }

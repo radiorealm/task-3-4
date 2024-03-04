@@ -45,7 +45,7 @@ namespace task_3_4
             {
                 for (int j = 0; j < m; j++)
                 {
-                    //array[i, j] = Convert.ToInt32(Console.ReadLine());
+                    array[i, j] = (T)(Console.ReadLine());
                 }
             }
 

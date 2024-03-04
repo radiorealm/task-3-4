@@ -29,7 +29,7 @@ namespace task_3_4
 
             for (int i = 0; i < array.Length; i++)
             {
-                //array[i] = Parse(Console.ReadLine());
+                array[i] = (T)(Console.ReadLine());
             }
 
             Console.WriteLine();
