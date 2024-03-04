@@ -9,6 +9,7 @@ namespace task_3_4
 
         public OneDim(int n, bool entry = false) : base(n, entry)
         {
+
             this.n = n;
             array = new T[n];
             Fill();
@@ -19,7 +20,7 @@ namespace task_3_4
             n = rnd.Next(11);
             for (int i = 0; i < n; i++)
             {
-
+                array[i] = value.Give<T>(array[0].GetType());
             }
         }
         public override void UserEntry()
@@ -28,7 +29,7 @@ namespace task_3_4
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = Parse(Console.ReadLine());
+                //array[i] = Parse(Console.ReadLine());
             }
 
             Console.WriteLine();

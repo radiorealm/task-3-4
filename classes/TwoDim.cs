@@ -33,7 +33,7 @@ namespace task_3_4
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = rnd.Next(1, 100);
+                    array[i, j] = value.Give<T>(array[0, 0].GetType());
                 }
             }
         }
@@ -45,7 +45,7 @@ namespace task_3_4
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = Convert.ToInt32(Console.ReadLine());
+                    //array[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
 

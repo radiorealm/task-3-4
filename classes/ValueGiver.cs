@@ -24,7 +24,7 @@ namespace task_3_4
                 case "bool":
                     return bools[random.Next(bools.Length)];
                 case "double":
-                    return ;
+                    return random.NextDouble();
             }
             //способ преобразование в универсальный тип - ?
         }
