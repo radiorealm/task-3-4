@@ -4,13 +4,18 @@ namespace task_3_4
 {
     abstract class Parent<T> : IParent, IPrinter
     {
-        protected ValueGiver value = new ValueGiver();
+        protected StringValueGiver strings = new();
+        protected BoolValueGiver bools = new();
+        protected DoubleValueGiver doubles = new();
 
         protected static Random rnd = new Random();
 
         protected bool entry = false;
 
-        public Parent(int n, bool entry) { }
+        public Parent(bool entry)
+        {
+            Fill();
+        }
 
         public abstract void RndEntry();
 

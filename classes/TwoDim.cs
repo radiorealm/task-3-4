@@ -10,42 +10,40 @@ namespace task_3_4
 
         private T[,] array;
 
-        public TwoDim(int n, int m, bool entry = false) : base(n, entry)
-        {
-            array = new T[n, m];
-
-            this.m = m;
-            this.n = n;
-
-            if (!entry)
-            {
-                RndEntry();
-            }
-            else
-            {
-                UserEntry();
-            }
-        }
+        public TwoDim(bool entry = false) : base(entry) { }
 
         public override void RndEntry()
         {
+            n = rnd.Next(11);
+            m = rnd.Next(11);
+
+            array = new T[n, m];
+
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = value.Give<T>(array[0, 0].GetType());
+                    array[i, j] = 
                 }
             }
         }
         public override void UserEntry()
         {
-            Console.WriteLine("Введите значения массива вручную");
+            Console.WriteLine("Введите длину строки");
+            n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите длину столбца");
+            m = int.Parse(Console.ReadLine());
+
+            array = new T[n, m];
+
+            Console.WriteLine($"Введите значения вручную. Тип массива: {array[0, 0].GetType()}");
 
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = (T)(Console.ReadLine());
+                    array[i, j] = 
                 }
             }
 

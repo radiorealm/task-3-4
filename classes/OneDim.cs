@@ -7,29 +7,31 @@ namespace task_3_4
         private int n;
         private T[] array;
 
-        public OneDim(int n, bool entry = false) : base(n, entry)
-        {
-
-            this.n = n;
-            array = new T[n];
-            Fill();
-        }
+        public OneDim(bool entry = false) : base(entry) { }
 
         public override void RndEntry()
         {
             n = rnd.Next(11);
+
+            array = new T[n];
+
             for (int i = 0; i < n; i++)
             {
-                array[i] = value.Give<T>(array[0].GetType());
+                array[i] = 
             }
         }
         public override void UserEntry()
         {
-            Console.WriteLine("Введите значения массива вручную");
+            Console.WriteLine("Введите длину массива");
+            n = int.Parse(Console.ReadLine());
+
+            array = new T[n];
+
+            Console.WriteLine($"Введите значения вручную. Тип массива: {array[0].GetType()}");
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = (T)(Console.ReadLine());
+                array[i] = 
             }
 
             Console.WriteLine();
