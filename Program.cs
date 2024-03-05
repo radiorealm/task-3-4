@@ -26,6 +26,7 @@ namespace task_3_4
 
             Console.WriteLine();
 
+            Console.WriteLine("Двумерные массивы");
             TwoDim<int> inttwodim = new(entry);
             printer_array[4] = inttwodim;
             TwoDim<string> stringtwodim = new(entry);
