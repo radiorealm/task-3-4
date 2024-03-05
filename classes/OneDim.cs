@@ -20,7 +20,7 @@ namespace task_3_4
             n = rnd.Next(11);
             for (int i = 0; i < n; i++)
             {
-                array[i] = value.Give<T>(array[0].GetType());
+                array[i] = 
             }
         }
         public override void UserEntry()

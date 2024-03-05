@@ -4,7 +4,9 @@ namespace task_3_4
 {
     abstract class Parent<T> : IParent, IPrinter
     {
-        protected ValueGiver value = new ValueGiver();
+        protected StringValueGiver strings = new();
+        protected BoolValueGiver bools = new();
+        protected DoubleValueGiver doubles = new();
 
         protected static Random rnd = new Random();
 
@@ -27,6 +29,27 @@ namespace task_3_4
             else
             {
                 UserEntry();
+            }
+        }
+
+        public void GetType(T[] array)
+        {
+            string _type = (array[0].GetType()).ToString();
+            switch (_type)
+            {
+                case "int":
+                    IntValueGiver values = new();
+                    break;
+
+                case "string":
+                    StringValueGiver values = new();
+                    break;
+
+                case "double":
+                    break;
+
+                case "bool":
+                    break;
             }
         }
     }
