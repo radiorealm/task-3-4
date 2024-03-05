@@ -8,7 +8,7 @@ namespace task_3_4
 {
     class StringValueGiver: IValueGiver<string>
     {
-        Random rnd = new Random();
+        Random rnd = new();
         public string GetRandomValue()
         {
             string alphabet = "qwertyuiopasdfghjklzxcvbnm1234567890";
