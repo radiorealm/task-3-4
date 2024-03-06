@@ -17,7 +17,6 @@ namespace task_3_4
 
         public bool GetUserValue()
         {
-            Console.WriteLine("Введите логическое значение для элемента списка");
             return bool.Parse(Console.ReadLine());
         }
     }

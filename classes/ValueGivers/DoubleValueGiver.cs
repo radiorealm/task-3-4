@@ -16,7 +16,6 @@ namespace task_3_4
 
         public double GetUserValue()
         {
-            Console.WriteLine("Введите десятичное число для элемента списка");
             return double.Parse(Console.ReadLine());
         }
     }

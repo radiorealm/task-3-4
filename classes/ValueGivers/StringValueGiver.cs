@@ -22,7 +22,6 @@ namespace task_3_4
 
         public string GetUserValue()
         {
-            Console.WriteLine("Введите строку для элемента списка");
             return Console.ReadLine();
         }
     }

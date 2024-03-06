@@ -8,12 +8,16 @@ namespace task_3_4
         protected BoolValueGiver bools = new();
         protected DoubleValueGiver doubles = new();
 
+        protected IValueGiver<T> valuegiver;
+
         protected static Random rnd = new Random();
 
         protected bool entry = false;
 
-        public Parent(bool entry)
+        public Parent(IValueGiver<T> valuegiver, bool entry)
         {
+            this.valuegiver = valuegiver;
+            this.entry = entry;
             Fill();
         }
 

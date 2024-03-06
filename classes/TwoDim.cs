@@ -10,12 +10,12 @@ namespace task_3_4
 
         private T[,] array;
 
-        public TwoDim(bool entry = false) : base(entry) { }
+        public TwoDim(IValueGiver<T> values, bool entry = false) : base(values, entry) { }
 
         public override void RndEntry()
         {
-            n = rnd.Next(11);
-            m = rnd.Next(11);
+            n = rnd.Next(1, 11);
+            m = rnd.Next(1, 11);
 
             array = new T[n, m];
 
@@ -23,7 +23,7 @@ namespace task_3_4
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = 
+                    array[i, j] = valuegiver.GetRandomValue();
                 }
             }
         }
@@ -37,13 +37,13 @@ namespace task_3_4
 
             array = new T[n, m];
 
-            Console.WriteLine($"Введите значения вручную. Тип массива: {array[0, 0].GetType()}");
+            Console.WriteLine("Введите значения вручную.");
 
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = 
+                    array[i, j] = valuegiver.GetUserValue();
                 }
             }
 

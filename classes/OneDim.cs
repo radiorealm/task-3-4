@@ -7,17 +7,17 @@ namespace task_3_4
         private int n;
         private T[] array;
 
-        public OneDim(bool entry = false) : base(entry) { }
+        public OneDim(IValueGiver<T> valuegiver, bool entry = false) : base(valuegiver, entry) { }
 
         public override void RndEntry()
         {
-            n = rnd.Next(11);
+            n = rnd.Next(1, 11);
 
             array = new T[n];
 
             for (int i = 0; i < n; i++)
             {
-                array[i] = 
+                array[i] = valuegiver.GetRandomValue();
             }
         }
         public override void UserEntry()
@@ -27,11 +27,11 @@ namespace task_3_4
 
             array = new T[n];
 
-            Console.WriteLine($"Введите значения вручную. Тип массива: {array[0].GetType()}");
+            Console.WriteLine("Введите значения вручную.");
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = 
+                array[i] = valuegiver.GetUserValue();
             }
 
             Console.WriteLine();

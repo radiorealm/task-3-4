@@ -16,7 +16,6 @@ namespace task_3_4
 
         public int GetUserValue()
         {
-            Console.WriteLine("Введите число для элемента списка");
             return int.Parse(Console.ReadLine());
         }
     }
