@@ -4,10 +4,6 @@ namespace task_3_4
 {
     abstract class Parent<T> : IParent, IPrinter
     {
-        protected StringValueGiver strings = new();
-        protected BoolValueGiver bools = new();
-        protected DoubleValueGiver doubles = new();
-
         protected IValueGiver<T> valuegiver;
 
         protected static Random rnd = new Random();
